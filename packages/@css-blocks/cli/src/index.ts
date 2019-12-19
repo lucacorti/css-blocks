@@ -1,3 +1,6 @@
+import {
+  convertBemToBlocks,
+} from "@css-blocks/bem-to-blocks";
 import { search as searchForConfiguration } from "@css-blocks/config";
 import {
   BlockFactory,
@@ -11,9 +14,6 @@ import {
   errorHasRange,
   hasMappedPosition,
 } from "@css-blocks/core";
-import {
-  convertBemToBlocks
-} from "@css-blocks/bem-to-blocks";
 import chalk = require("chalk");
 import fse = require("fs-extra");
 import path = require("path");
@@ -46,7 +46,6 @@ interface ValidateArgs extends GlobalArgs {
 interface ConvertArgs extends GlobalArgs {
   files: unknown;
 }
-
 
 interface ValidateOptions {
   /**
